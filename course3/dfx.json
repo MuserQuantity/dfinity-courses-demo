@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "dfx": "0.8.4",
+  "canisters": {
+    "course3_main": {
+      "type": "motoko",
+      "main": "src/course3/main.mo"
+    },
+    "course3_counter": {
+      "type": "motoko",
+      "main": "src/course3/counter.mo"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
