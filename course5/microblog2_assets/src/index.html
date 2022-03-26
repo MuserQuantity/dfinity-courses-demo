@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>microblog2</title>
+  <base href="/" />
+  <link rel="icon" href="favicon.ico" />
+  <!-- <link type="text/css" rel="stylesheet" href="main.css" /> -->
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+
+<body>
+  <header>
+    <h1>IC Microblog</h1>
+  </header>
+  <main>
+    <label for="following_section">关注的id</label><br>
+    <section id="following_section"></section><br>
+    <div id="selecting_following_div">
+      <label for="following_posts"><label id="selecting_following"></label>发布的内容：</label><br>
+      <section id="following_posts"></section>
+    </div>
+    <hr>
+    <label for="message">What to post? &nbsp;</label><br>
+    <textarea id="message" cols="30" rows="10"></textarea><br>
+    <button id="post_button" type="submit">post</button>
+    <hr>
+    <label for="posts">自己发布的内容：</label><br>
+    <section id="posts"></section>
+  </main>
+</body>
+
+</html>
