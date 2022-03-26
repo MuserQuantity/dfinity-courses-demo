@@ -45,13 +45,17 @@ async function load_follows(){
   for (var i = 0; i < following_num; i++) {
     let f = document.createElement("button");
     f.innerText = following[i];
-    f.onclick=await load_following_posts(following[i]);
+    let id = following[i];
+    f.onclick = async function(){
+      await load_following_posts(id);
+    };
     following_section.appendChild(f);
   }
 }
 
 async function load_following_posts(id){
-  console.log(id);
+  let name_label = document.getElementById("selecting_following");
+  name_label.innerText = id;
   let following_posts = document.getElementById("following_posts");
   let posts = await microblog2.following_posts(id,Date.parse(new Date())-3600*24*5);
   following_posts.replaceChildren([]);
